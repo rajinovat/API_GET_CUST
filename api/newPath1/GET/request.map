@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping"
+	domainID="com.ibm.msl.mapping.xml"
+	domainIDExtension="zosconnect"
+	targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/GET"
+	version="8.0.5.0"
+	xmlns:map="http://www.ibm.com/zosConnect/2.0/mapping/GET">
+
+	<inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"><![CDATA[
+
+	<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET">
+  <xsd:element name="X774210_CIS_CIF_MQ_DETAIL" type="tns:X774210_CIS_CIF_MQ_DETAIL"/>
+  <xsd:complexType name="X774210_CIS_CIF_MQ_DETAIL">
+    <xsd:sequence>
+      <xsd:element name="STDINPUT_INPUT_HEADER" type="tns:STDINPUT_INPUT_HEADER"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="STDINPUT_INPUT_HEADER">
+    <xsd:sequence>
+      <xsd:element name="STDINPUT_ORGINATING_APPLIC">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="STDINPUT_INITIATED_TIME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="1.0E8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="STDINPUT_INITIATED_DATE_GREG">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="1.0E8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="STDINPUT_WORKSTATION">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_REQUEST_MESSAGE" type="tns:X774210_REQUEST_MESSAGE"/>
+      <xsd:element name="STDINPUT_SERVICE_REQUEST">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="24"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X783700_SECONDARY_HDR" type="tns:X783700_SECONDARY_HDR"/>
+      <xsd:element name="STDINPUT_SERVICE_REQUEST_2">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="24"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="STDINPUT_MESSAGE_VERSION_NBR">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="99.0"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="STDINPUT_EFFECTIVE_DATE_GREG">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="1.0E8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="STDINPUT_OPERATOR_BRANCH">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="999999.0"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="STDINPUT_INITIATING_COMPANY">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="99999.0"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="STDINPUT_OPERATOR">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="X774210_REQUEST_MESSAGE">
+    <xsd:sequence>
+      <xsd:element name="X774210_SELECTION_CODE">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_R_CUST_TIE">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="99999.0"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_R_ACCT_PROD">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_R_CUST_ID">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="9"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_R_ACCT_NUMBER">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="23"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_LAST_KNOWN_ADDR_IND">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_OFFER_RESTN_SUBP">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_OFFER_RESTN_FLAG">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_R_CUST_NO">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="9.99999986991104E14"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_OFFER_RESTN_PROD">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X774210_R_CUST_NAME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="40"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="X783700_SECONDARY_HDR">
+    <xsd:sequence>
+      <xsd:element name="X783700_LINKAGE_NUMBER">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0.0"/>
+            <xsd:maxInclusive value="99.0"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X783700_ACCOUNT_NUMBER">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="23"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X783700_REGISTRATION_NBR">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="23"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="X783700_PROCESSING_APPLN">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+
+	]]></inlinedXMLSchema>
+
+	<inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"><![CDATA[
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"
+      xmlns:body="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"
+      xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET">
+
+      <xsd:import namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" schemaLocation="../schema_0.xsd"/>
+
+      <xsd:element name="HTTPRequest" type="tns:HTTPRequestType"/>
+
+      <xsd:complexType name="HTTPRequestType">
+        <xsd:sequence>
+          <xsd:element name="Headers" type="tns:HeadersType"/>
+          <xsd:element name="PathParameters" type="tns:PathParametersType"/>
+          <xsd:element name="QueryParameters" type="tns:QueryParametersType"/>
+          <xsd:element name="Body" type="tns:BodyType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="HeadersType">
+        <xsd:sequence>
+        	<xsd:element maxOccurs="1" minOccurs="0" name="Authorization" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="PathParametersType">
+        <xsd:sequence>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="QueryParametersType">
+        <xsd:sequence>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="BodyType">
+        <xsd:sequence>
+          <xsd:element ref="body:X774210_CIS_CIF_MQ_DETAIL"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+
+	]]></inlinedXMLSchema>
+
+    <input inlinedXMLSchema="true" path="../schema_1.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" var="rootInput"/>
+    <output inlinedXMLSchema="true" path="../schema_0.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" var="rootOutput"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"/>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"/>
+    </namespaces>
+    <mappingDeclaration name="GET.newPath1">
+        <input namespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" path="$rootInput/HTTPRequest"/>
+        <output namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" path="$rootOutput/X774210_CIS_CIF_MQ_DETAIL"/>
+        <passthrough>
+            <input path="Body/X774210_CIS_CIF_MQ_DETAIL"/>
+            <output path="."/>
+            <updates>
+            </updates>
+        </passthrough>
+    </mappingDeclaration>
+
+</mappingRoot>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="GET_CUST">
+    <apiSpec title="GET_CUST" basePath="/GET_CUST" description="get customer from CAP" version="1.0.0">
+        <path relativePath="/newPath1">
+<<<<<<< HEAD
+            <method type="POST"/>
+            <method type="GET" zosConnectServiceRef="GET_CUST_PROFILE_V06" httpXformFile="api/newPath1/GET/mapping.xml"/>
+            <method type="PUT"/>
+            <method type="DELETE"/>
+        </path>
+        <path relativePath="/newPath2">
+            <method type="POST"/>
+            <method type="GET"/>
+            <method type="PUT"/>
+            <method type="DELETE"/>
+=======
+            <method type="POST" zosConnectServiceRef="GET_CUST_PROFILE_V06"/>
+            <method type="GET" zosConnectServiceRef="GET_CUST_PROFILE_V06" httpXformFile="api/newPath1/GET/mapping.xml"/>
+            <method type="PUT" zosConnectServiceRef="GET_CUST_PROFILE_V06"/>
+>>>>>>> 0e07f88d2e4cc5a109308531df1b2556355e0ae8
+        </path>
+        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
+    </apiSpec>
+</zosConnectApi>

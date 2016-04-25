@@ -1,0 +1,3409 @@
+<<<<<<< HEAD
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "get customer from CAP",
+    "version" : "1.0.0",
+    "title" : "GET_CUST"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/GET_CUST",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/newPath1" : {
+      "get" : {
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GET_CUST_PROFILE_V06_GET_request",
+          "description" : "request body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GET_CUST_PROFILE_V06_GET_request"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "normal response",
+            "schema" : {
+              "$ref" : "#/definitions/GET_CUST_PROFILE_V06_GET_response_200"
+            }
+          }
+        }
+      }
+    },
+    "/newPath2" : { }
+  },
+  "definitions" : {
+    "GET_CUST_PROFILE_V06_GET_request" : {
+      "type" : "object",
+      "properties" : {
+        "X774210_CIS_CIF_MQ_DETAIL" : {
+          "type" : "object",
+          "properties" : {
+            "STDINPUT_INPUT_HEADER" : {
+              "type" : "object",
+              "properties" : {
+                "STDINPUT_ORGINATING_APPLIC" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "STDINPUT_INITIATED_TIME" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_INITIATED_DATE_GREG" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_WORKSTATION" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774210_REQUEST_MESSAGE" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774210_SELECTION_CODE" : {
+                      "type" : "string",
+                      "maxLength" : 8
+                    },
+                    "X774210_R_CUST_TIE" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 99999.0
+                    },
+                    "X774210_R_ACCT_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_R_CUST_ID" : {
+                      "type" : "string",
+                      "maxLength" : 9
+                    },
+                    "X774210_R_ACCT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X774210_LAST_KNOWN_ADDR_IND" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    },
+                    "X774210_OFFER_RESTN_SUBP" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_OFFER_RESTN_FLAG" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    },
+                    "X774210_R_CUST_NO" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 9.99999986991104E14
+                    },
+                    "X774210_OFFER_RESTN_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_R_CUST_NAME" : {
+                      "type" : "string",
+                      "maxLength" : 40
+                    }
+                  }
+                },
+                "STDINPUT_SERVICE_REQUEST" : {
+                  "type" : "string",
+                  "maxLength" : 24,
+                  "default" : "PCAP-CIS-CUST-DETAL2-REQ"
+                },
+                "X783700_SECONDARY_HDR" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X783700_LINKAGE_NUMBER" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 99.0
+                    },
+                    "X783700_ACCOUNT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X783700_REGISTRATION_NBR" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X783700_PROCESSING_APPLN" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    }
+                  }
+                },
+                "STDINPUT_SERVICE_REQUEST_2" : {
+                  "type" : "string",
+                  "maxLength" : 24,
+                  "default" : "PCAP-CIS-CUST-DETAL2-REQ"
+                },
+                "STDINPUT_MESSAGE_VERSION_NBR" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99.0
+                },
+                "STDINPUT_EFFECTIVE_DATE_GREG" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_OPERATOR_BRANCH" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999999.0
+                },
+                "STDINPUT_INITIATING_COMPANY" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "STDINPUT_OPERATOR" : {
+                  "type" : "string",
+                  "maxLength" : 8,
+                  "default" : "ZOSCONCT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GET_CUST_PROFILE_V06_GET_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "X774408_CIS_CIF_MQ_DETAIL_V01" : {
+          "type" : "object",
+          "properties" : {
+            "X774251_RESPONSE_MESSAGE" : {
+              "type" : "object",
+              "properties" : {
+                "X774251_OCCUPATION_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "X774251_ADR1_START_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR1_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR1_DATA_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_SENSITIVITY_CODE_N" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.0
+                },
+                "X774251_COUNTRY_EXEMPT" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_COST_CENTER" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9999999.0
+                },
+                "X774251_OPER_LAST_MAINT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774251_BRN" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_INDIV_PHONNBR_TBL" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_PREF_PHONE_IND" : {
+                        "type" : "string",
+                        "maxLength" : 1
+                      },
+                      "X774251_PHONE_EFF_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 1.0E8
+                      },
+                      "X774251_PHONNBR_SEQ" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 9999.0
+                      },
+                      "X774251_PHONE_NBR" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_PHONE_EXP_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 1.0E8
+                      },
+                      "X774251_PHONNBR_TYPE" : {
+                        "type" : "string",
+                        "maxLength" : 6
+                      }
+                    }
+                  }
+                },
+                "X774251_TIE_BREAKER" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_ADDR1_APT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADDR2_APT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_SSN_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_SECURITY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 20
+                },
+                "X774251_CUST_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.99999986991104E14
+                },
+                "X774251_ADR1_DATA_CITY" : {
+                  "type" : "string",
+                  "maxLength" : 25
+                },
+                "X774251_ADR1_CI_ST_FROM_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DATE_CUST_CLOSED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR1_HASH" : {
+                  "type" : "string",
+                  "maxLength" : 6
+                },
+                "X774251_CUST_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR1_DATA_STATE" : {
+                  "type" : "string",
+                  "maxLength" : 15
+                },
+                "X774251_ADR1_DATA_ZIP9" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_ADR2_STATE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR1_USE_OCC_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_EMAIL_DATE_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_TAX_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_DATA_ZIP9" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_ADDR1_STREET" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_ADR1_STATE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADVERTISING_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DISCLOSURE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_OCC_GROUP_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_DATE_BUS_EST" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_AVG_CR_BALANCE" : {
+                  "type" : "number",
+                  "description" : "Type is decimal. ",
+                  "minimum" : 0.0,
+                  "maximum" : 1.00000000099E9
+                },
+                "X774251_SEC_IND" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADDR1_FORGN_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_PLACE_OF_WORK" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_CUST_DATE_OF_BIRTH" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR2_HASH" : {
+                  "type" : "string",
+                  "maxLength" : 6
+                },
+                "X774251_ADR1_HH_ID" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E9
+                },
+                "X774251_ADR1_DATA_STREET0" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR1_DATA_STREET1" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR1_DATA_STREET2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR2_DATA_CITY" : {
+                  "type" : "string",
+                  "maxLength" : 25
+                },
+                "X774251_VALUE_FLAG" : {
+                  "type" : "string",
+                  "maxLength" : 7
+                },
+                "X774251_NAME_2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_NAME_1" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774251_NAME_1_COML" : {
+                      "type" : "string",
+                      "maxLength" : 39
+                    },
+                    "X774251_NAME_1_TYPE" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    }
+                  }
+                },
+                "X774251_ADR2_USE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_SIC_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "X774251_CUST_DATE_DECEASED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_OFF_2" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_OFF_1" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_PERFORMANCE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADDR2_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR2_HH_ID" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E9
+                },
+                "X774251_ADR2_COUNTY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_ADR1_COUNTY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_TOTAL_CML_CONTACTS" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADR1_END_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_DATE_LAST_CONTACT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADR2_DATA_CTRY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_GOVT_REF_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADDR1_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_MAIL_TITLE" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_EMAIL" : {
+                  "type" : "string",
+                  "maxLength" : 120
+                },
+                "X774251_EMAIL_OPER_LAST_MAINT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774251_CUST_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_SSN_TAXID_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_CUST_TYPE_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR2_USE_OCC_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_MARITAL_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_TEST_PROD_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_DATA_STATE" : {
+                  "type" : "string",
+                  "maxLength" : 15
+                },
+                "X774251_TELEX_NBR" : {
+                  "type" : "string",
+                  "maxLength" : 16
+                },
+                "X774251_ADR2_END_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_CML_CONT_TBL" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_PREF_CONTACT_IND" : {
+                        "type" : "string",
+                        "maxLength" : 1
+                      },
+                      "X774251_CONTACT_MOBILE" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_SEQ_NBR" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 9999.0
+                      },
+                      "X774251_CONTACT_FAX_NBR" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_PHONE" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_NAME" : {
+                        "type" : "string",
+                        "maxLength" : 40
+                      },
+                      "X774251_CONTACT_TITLE" : {
+                        "type" : "string",
+                        "maxLength" : 40
+                      }
+                    }
+                  }
+                },
+                "X774251_CUST_LANG_CD" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_DATE_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_EMPLOYEE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADDR2_STREET" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_ID" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_GOVT_REF_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.9999997952E10
+                },
+                "X774251_ALIAS_RECORD_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DATE_BANKRUPT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_BANK_RELATIONSHIPS" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_BK_REL" : {
+                        "type" : "string",
+                        "maxLength" : 3
+                      }
+                    }
+                  }
+                },
+                "X774251_BANK_SERVICES" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_BK_SER" : {
+                        "type" : "string",
+                        "maxLength" : 3
+                      }
+                    }
+                  }
+                },
+                "X774251_ADR1_DATA_CTRY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR2_CI_ST_FROM_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_SALUTATION" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_COE_EXPIRY_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_EXPAN_NAME_ID" : {
+                  "type" : "string",
+                  "maxLength" : 19
+                },
+                "X774251_CD_ACCT_DETAILS" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774251_CD_LAST_ACCT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X774251_CD_ACCT_DATA" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "X774251_CD_PRODUCT_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_ACCT_REL_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_BALANCE_SIGN" : {
+                            "type" : "string",
+                            "maxLength" : 1
+                          },
+                          "X774251_CD_SUBPROD_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_LIMIT" : {
+                            "type" : "number",
+                            "description" : "Type is decimal. ",
+                            "minimum" : 0.0,
+                            "maximum" : 9.99999982796899E12
+                          },
+                          "X774251_CD_ACCT_BRANCH" : {
+                            "type" : "integer",
+                            "minimum" : 0.0,
+                            "maximum" : 99999.0
+                          },
+                          "X774251_CD_ACCT_NUMBER" : {
+                            "type" : "string",
+                            "maxLength" : 23
+                          },
+                          "X774251_CD_LIMIT_SIGN" : {
+                            "type" : "string",
+                            "maxLength" : 1
+                          },
+                          "X774251_CD_BALANCE" : {
+                            "type" : "number",
+                            "description" : "Type is decimal. ",
+                            "minimum" : 0.0,
+                            "maximum" : 9.99999982796899E12
+                          },
+                          "X774251_CD_DATE_ACT_OPENED" : {
+                            "type" : "integer",
+                            "minimum" : 0.0,
+                            "maximum" : 1.0E8
+                          },
+                          "X774251_CD_ACCT_STATUS" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_RISK_GRADE" : {
+                            "type" : "string",
+                            "maxLength" : 2
+                          }
+                        }
+                      }
+                    },
+                    "X774251_CD_NUM_ACCTS_RETND" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 999.0
+                    },
+                    "X774251_CD_LAST_ACCT_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774251_CD_MORE_ACCTS_IND" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    }
+                  }
+                },
+                "X774251_INDIV_EMPLOYMT_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR1_USE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_TOTAL_INDIV_PHONNBRS" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADR2_DATA_STREET0" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADDR2_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_DIARY_COMMENT_FLAG" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "FILL_1" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR2_DATA_STREET1" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR2_DATA_STREET2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADDR2_FORGN_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_DATE_CUST_OPENED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_TAXID_SUFFIX" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_START_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADR2_DATA_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_TFN_EXEMP_NUM_DIGITS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_CUST_SEX" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_NATLTY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                }
+              }
+            },
+            "STDOUTPT_PRIMARY_HEADER" : {
+              "type" : "object",
+              "properties" : {
+                "STDOUTPT_ERROR_MESSAGE" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "STDOUTPT_SERVICE_RESULT_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "STDOUTPT_CONDITION_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+=======
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "get customer from CAP",
+    "version" : "1.0.0",
+    "title" : "GET_CUST"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/GET_CUST",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/newPath1" : {
+      "get" : {
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GET_CUST_PROFILE_V06_GET_request",
+          "description" : "request body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GET_CUST_PROFILE_V06_GET_request"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "normal response",
+            "schema" : {
+              "$ref" : "#/definitions/GET_CUST_PROFILE_V06_GET_response_200"
+            }
+          }
+        }
+      },
+      "post" : {
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GET_CUST_PROFILE_V06_POST_request",
+          "description" : "request body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GET_CUST_PROFILE_V06_POST_request"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "normal response",
+            "schema" : {
+              "$ref" : "#/definitions/GET_CUST_PROFILE_V06_POST_response_200"
+            }
+          }
+        }
+      },
+      "put" : {
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GET_CUST_PROFILE_V06_PUT_request",
+          "description" : "request body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GET_CUST_PROFILE_V06_PUT_request"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "normal response",
+            "schema" : {
+              "$ref" : "#/definitions/GET_CUST_PROFILE_V06_PUT_response_200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "GET_CUST_PROFILE_V06_PUT_request" : {
+      "type" : "object",
+      "properties" : {
+        "X774210_CIS_CIF_MQ_DETAIL" : {
+          "type" : "object",
+          "properties" : {
+            "STDINPUT_INPUT_HEADER" : {
+              "type" : "object",
+              "properties" : {
+                "STDINPUT_ORGINATING_APPLIC" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "STDINPUT_INITIATED_TIME" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_INITIATED_DATE_GREG" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_WORKSTATION" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774210_REQUEST_MESSAGE" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774210_SELECTION_CODE" : {
+                      "type" : "string",
+                      "maxLength" : 8
+                    },
+                    "X774210_R_CUST_TIE" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 99999.0
+                    },
+                    "X774210_R_ACCT_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_R_CUST_ID" : {
+                      "type" : "string",
+                      "maxLength" : 9
+                    },
+                    "X774210_R_ACCT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X774210_LAST_KNOWN_ADDR_IND" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    },
+                    "X774210_OFFER_RESTN_SUBP" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_OFFER_RESTN_FLAG" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    },
+                    "X774210_R_CUST_NO" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 9.99999986991104E14
+                    },
+                    "X774210_OFFER_RESTN_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_R_CUST_NAME" : {
+                      "type" : "string",
+                      "maxLength" : 40
+                    }
+                  }
+                },
+                "STDINPUT_SERVICE_REQUEST" : {
+                  "type" : "string",
+                  "maxLength" : 24,
+                  "default" : "PCAP-CIS-CUST-DETAL2-REQ"
+                },
+                "X783700_SECONDARY_HDR" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X783700_LINKAGE_NUMBER" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 99.0
+                    },
+                    "X783700_ACCOUNT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X783700_REGISTRATION_NBR" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X783700_PROCESSING_APPLN" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    }
+                  }
+                },
+                "STDINPUT_SERVICE_REQUEST_2" : {
+                  "type" : "string",
+                  "maxLength" : 24,
+                  "default" : "PCAP-CIS-CUST-DETAL2-REQ"
+                },
+                "STDINPUT_MESSAGE_VERSION_NBR" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99.0
+                },
+                "STDINPUT_EFFECTIVE_DATE_GREG" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_OPERATOR_BRANCH" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999999.0
+                },
+                "STDINPUT_INITIATING_COMPANY" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "STDINPUT_OPERATOR" : {
+                  "type" : "string",
+                  "maxLength" : 8,
+                  "default" : "ZOSCONCT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GET_CUST_PROFILE_V06_POST_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "X774408_CIS_CIF_MQ_DETAIL_V01" : {
+          "type" : "object",
+          "properties" : {
+            "X774251_RESPONSE_MESSAGE" : {
+              "type" : "object",
+              "properties" : {
+                "X774251_OCCUPATION_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "X774251_ADR1_START_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR1_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR1_DATA_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_SENSITIVITY_CODE_N" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.0
+                },
+                "X774251_COUNTRY_EXEMPT" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_COST_CENTER" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9999999.0
+                },
+                "X774251_OPER_LAST_MAINT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774251_BRN" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_INDIV_PHONNBR_TBL" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_PREF_PHONE_IND" : {
+                        "type" : "string",
+                        "maxLength" : 1
+                      },
+                      "X774251_PHONE_EFF_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 1.0E8
+                      },
+                      "X774251_PHONNBR_SEQ" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 9999.0
+                      },
+                      "X774251_PHONE_NBR" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_PHONE_EXP_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 1.0E8
+                      },
+                      "X774251_PHONNBR_TYPE" : {
+                        "type" : "string",
+                        "maxLength" : 6
+                      }
+                    }
+                  }
+                },
+                "X774251_TIE_BREAKER" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_ADDR1_APT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADDR2_APT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_SSN_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_SECURITY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 20
+                },
+                "X774251_CUST_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.99999986991104E14
+                },
+                "X774251_ADR1_DATA_CITY" : {
+                  "type" : "string",
+                  "maxLength" : 25
+                },
+                "X774251_ADR1_CI_ST_FROM_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DATE_CUST_CLOSED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR1_HASH" : {
+                  "type" : "string",
+                  "maxLength" : 6
+                },
+                "X774251_CUST_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR1_DATA_STATE" : {
+                  "type" : "string",
+                  "maxLength" : 15
+                },
+                "X774251_ADR1_DATA_ZIP9" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_ADR2_STATE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR1_USE_OCC_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_EMAIL_DATE_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_TAX_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_DATA_ZIP9" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_ADDR1_STREET" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_ADR1_STATE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADVERTISING_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DISCLOSURE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_OCC_GROUP_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_DATE_BUS_EST" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_AVG_CR_BALANCE" : {
+                  "type" : "number",
+                  "description" : "Type is decimal. ",
+                  "minimum" : 0.0,
+                  "maximum" : 1.00000000099E9
+                },
+                "X774251_SEC_IND" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADDR1_FORGN_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_PLACE_OF_WORK" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_CUST_DATE_OF_BIRTH" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR2_HASH" : {
+                  "type" : "string",
+                  "maxLength" : 6
+                },
+                "X774251_ADR1_HH_ID" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E9
+                },
+                "X774251_ADR1_DATA_STREET0" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR1_DATA_STREET1" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR1_DATA_STREET2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR2_DATA_CITY" : {
+                  "type" : "string",
+                  "maxLength" : 25
+                },
+                "X774251_VALUE_FLAG" : {
+                  "type" : "string",
+                  "maxLength" : 7
+                },
+                "X774251_NAME_2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_NAME_1" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774251_NAME_1_COML" : {
+                      "type" : "string",
+                      "maxLength" : 39
+                    },
+                    "X774251_NAME_1_TYPE" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    }
+                  }
+                },
+                "X774251_ADR2_USE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_SIC_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "X774251_CUST_DATE_DECEASED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_OFF_2" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_OFF_1" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_PERFORMANCE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADDR2_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR2_HH_ID" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E9
+                },
+                "X774251_ADR2_COUNTY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_ADR1_COUNTY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_TOTAL_CML_CONTACTS" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADR1_END_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_DATE_LAST_CONTACT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADR2_DATA_CTRY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_GOVT_REF_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADDR1_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_MAIL_TITLE" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_EMAIL" : {
+                  "type" : "string",
+                  "maxLength" : 120
+                },
+                "X774251_EMAIL_OPER_LAST_MAINT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774251_CUST_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_SSN_TAXID_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_CUST_TYPE_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR2_USE_OCC_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_MARITAL_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_TEST_PROD_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_DATA_STATE" : {
+                  "type" : "string",
+                  "maxLength" : 15
+                },
+                "X774251_TELEX_NBR" : {
+                  "type" : "string",
+                  "maxLength" : 16
+                },
+                "X774251_ADR2_END_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_CML_CONT_TBL" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_PREF_CONTACT_IND" : {
+                        "type" : "string",
+                        "maxLength" : 1
+                      },
+                      "X774251_CONTACT_MOBILE" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_SEQ_NBR" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 9999.0
+                      },
+                      "X774251_CONTACT_FAX_NBR" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_PHONE" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_NAME" : {
+                        "type" : "string",
+                        "maxLength" : 40
+                      },
+                      "X774251_CONTACT_TITLE" : {
+                        "type" : "string",
+                        "maxLength" : 40
+                      }
+                    }
+                  }
+                },
+                "X774251_CUST_LANG_CD" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_DATE_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_EMPLOYEE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADDR2_STREET" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_ID" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_GOVT_REF_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.9999997952E10
+                },
+                "X774251_ALIAS_RECORD_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DATE_BANKRUPT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_BANK_RELATIONSHIPS" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_BK_REL" : {
+                        "type" : "string",
+                        "maxLength" : 3
+                      }
+                    }
+                  }
+                },
+                "X774251_BANK_SERVICES" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_BK_SER" : {
+                        "type" : "string",
+                        "maxLength" : 3
+                      }
+                    }
+                  }
+                },
+                "X774251_ADR1_DATA_CTRY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR2_CI_ST_FROM_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_SALUTATION" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_COE_EXPIRY_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_EXPAN_NAME_ID" : {
+                  "type" : "string",
+                  "maxLength" : 19
+                },
+                "X774251_CD_ACCT_DETAILS" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774251_CD_LAST_ACCT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X774251_CD_ACCT_DATA" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "X774251_CD_PRODUCT_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_ACCT_REL_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_BALANCE_SIGN" : {
+                            "type" : "string",
+                            "maxLength" : 1
+                          },
+                          "X774251_CD_SUBPROD_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_LIMIT" : {
+                            "type" : "number",
+                            "description" : "Type is decimal. ",
+                            "minimum" : 0.0,
+                            "maximum" : 9.99999982796899E12
+                          },
+                          "X774251_CD_ACCT_BRANCH" : {
+                            "type" : "integer",
+                            "minimum" : 0.0,
+                            "maximum" : 99999.0
+                          },
+                          "X774251_CD_ACCT_NUMBER" : {
+                            "type" : "string",
+                            "maxLength" : 23
+                          },
+                          "X774251_CD_LIMIT_SIGN" : {
+                            "type" : "string",
+                            "maxLength" : 1
+                          },
+                          "X774251_CD_BALANCE" : {
+                            "type" : "number",
+                            "description" : "Type is decimal. ",
+                            "minimum" : 0.0,
+                            "maximum" : 9.99999982796899E12
+                          },
+                          "X774251_CD_DATE_ACT_OPENED" : {
+                            "type" : "integer",
+                            "minimum" : 0.0,
+                            "maximum" : 1.0E8
+                          },
+                          "X774251_CD_ACCT_STATUS" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_RISK_GRADE" : {
+                            "type" : "string",
+                            "maxLength" : 2
+                          }
+                        }
+                      }
+                    },
+                    "X774251_CD_NUM_ACCTS_RETND" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 999.0
+                    },
+                    "X774251_CD_LAST_ACCT_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774251_CD_MORE_ACCTS_IND" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    }
+                  }
+                },
+                "X774251_INDIV_EMPLOYMT_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR1_USE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_TOTAL_INDIV_PHONNBRS" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADR2_DATA_STREET0" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADDR2_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_DIARY_COMMENT_FLAG" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "FILL_1" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR2_DATA_STREET1" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR2_DATA_STREET2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADDR2_FORGN_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_DATE_CUST_OPENED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_TAXID_SUFFIX" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_START_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADR2_DATA_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_TFN_EXEMP_NUM_DIGITS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_CUST_SEX" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_NATLTY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                }
+              }
+            },
+            "STDOUTPT_PRIMARY_HEADER" : {
+              "type" : "object",
+              "properties" : {
+                "STDOUTPT_ERROR_MESSAGE" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "STDOUTPT_SERVICE_RESULT_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "STDOUTPT_CONDITION_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GET_CUST_PROFILE_V06_POST_request" : {
+      "type" : "object",
+      "properties" : {
+        "X774210_CIS_CIF_MQ_DETAIL" : {
+          "type" : "object",
+          "properties" : {
+            "STDINPUT_INPUT_HEADER" : {
+              "type" : "object",
+              "properties" : {
+                "STDINPUT_ORGINATING_APPLIC" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "STDINPUT_INITIATED_TIME" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_INITIATED_DATE_GREG" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_WORKSTATION" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774210_REQUEST_MESSAGE" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774210_SELECTION_CODE" : {
+                      "type" : "string",
+                      "maxLength" : 8
+                    },
+                    "X774210_R_CUST_TIE" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 99999.0
+                    },
+                    "X774210_R_ACCT_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_R_CUST_ID" : {
+                      "type" : "string",
+                      "maxLength" : 9
+                    },
+                    "X774210_R_ACCT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X774210_LAST_KNOWN_ADDR_IND" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    },
+                    "X774210_OFFER_RESTN_SUBP" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_OFFER_RESTN_FLAG" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    },
+                    "X774210_R_CUST_NO" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 9.99999986991104E14
+                    },
+                    "X774210_OFFER_RESTN_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_R_CUST_NAME" : {
+                      "type" : "string",
+                      "maxLength" : 40
+                    }
+                  }
+                },
+                "STDINPUT_SERVICE_REQUEST" : {
+                  "type" : "string",
+                  "maxLength" : 24,
+                  "default" : "PCAP-CIS-CUST-DETAL2-REQ"
+                },
+                "X783700_SECONDARY_HDR" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X783700_LINKAGE_NUMBER" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 99.0
+                    },
+                    "X783700_ACCOUNT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X783700_REGISTRATION_NBR" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X783700_PROCESSING_APPLN" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    }
+                  }
+                },
+                "STDINPUT_SERVICE_REQUEST_2" : {
+                  "type" : "string",
+                  "maxLength" : 24,
+                  "default" : "PCAP-CIS-CUST-DETAL2-REQ"
+                },
+                "STDINPUT_MESSAGE_VERSION_NBR" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99.0
+                },
+                "STDINPUT_EFFECTIVE_DATE_GREG" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_OPERATOR_BRANCH" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999999.0
+                },
+                "STDINPUT_INITIATING_COMPANY" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "STDINPUT_OPERATOR" : {
+                  "type" : "string",
+                  "maxLength" : 8,
+                  "default" : "ZOSCONCT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GET_CUST_PROFILE_V06_GET_request" : {
+      "type" : "object",
+      "properties" : {
+        "X774210_CIS_CIF_MQ_DETAIL" : {
+          "type" : "object",
+          "properties" : {
+            "STDINPUT_INPUT_HEADER" : {
+              "type" : "object",
+              "properties" : {
+                "STDINPUT_ORGINATING_APPLIC" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "STDINPUT_INITIATED_TIME" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_INITIATED_DATE_GREG" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_WORKSTATION" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774210_REQUEST_MESSAGE" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774210_SELECTION_CODE" : {
+                      "type" : "string",
+                      "maxLength" : 8
+                    },
+                    "X774210_R_CUST_TIE" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 99999.0
+                    },
+                    "X774210_R_ACCT_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_R_CUST_ID" : {
+                      "type" : "string",
+                      "maxLength" : 9
+                    },
+                    "X774210_R_ACCT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X774210_LAST_KNOWN_ADDR_IND" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    },
+                    "X774210_OFFER_RESTN_SUBP" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_OFFER_RESTN_FLAG" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    },
+                    "X774210_R_CUST_NO" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 9.99999986991104E14
+                    },
+                    "X774210_OFFER_RESTN_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774210_R_CUST_NAME" : {
+                      "type" : "string",
+                      "maxLength" : 40
+                    }
+                  }
+                },
+                "STDINPUT_SERVICE_REQUEST" : {
+                  "type" : "string",
+                  "maxLength" : 24,
+                  "default" : "PCAP-CIS-CUST-DETAL2-REQ"
+                },
+                "X783700_SECONDARY_HDR" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X783700_LINKAGE_NUMBER" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 99.0
+                    },
+                    "X783700_ACCOUNT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X783700_REGISTRATION_NBR" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X783700_PROCESSING_APPLN" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    }
+                  }
+                },
+                "STDINPUT_SERVICE_REQUEST_2" : {
+                  "type" : "string",
+                  "maxLength" : 24,
+                  "default" : "PCAP-CIS-CUST-DETAL2-REQ"
+                },
+                "STDINPUT_MESSAGE_VERSION_NBR" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99.0
+                },
+                "STDINPUT_EFFECTIVE_DATE_GREG" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "STDINPUT_OPERATOR_BRANCH" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999999.0
+                },
+                "STDINPUT_INITIATING_COMPANY" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "STDINPUT_OPERATOR" : {
+                  "type" : "string",
+                  "maxLength" : 8,
+                  "default" : "ZOSCONCT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GET_CUST_PROFILE_V06_PUT_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "X774408_CIS_CIF_MQ_DETAIL_V01" : {
+          "type" : "object",
+          "properties" : {
+            "X774251_RESPONSE_MESSAGE" : {
+              "type" : "object",
+              "properties" : {
+                "X774251_OCCUPATION_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "X774251_ADR1_START_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR1_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR1_DATA_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_SENSITIVITY_CODE_N" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.0
+                },
+                "X774251_COUNTRY_EXEMPT" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_COST_CENTER" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9999999.0
+                },
+                "X774251_OPER_LAST_MAINT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774251_BRN" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_INDIV_PHONNBR_TBL" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_PREF_PHONE_IND" : {
+                        "type" : "string",
+                        "maxLength" : 1
+                      },
+                      "X774251_PHONE_EFF_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 1.0E8
+                      },
+                      "X774251_PHONNBR_SEQ" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 9999.0
+                      },
+                      "X774251_PHONE_NBR" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_PHONE_EXP_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 1.0E8
+                      },
+                      "X774251_PHONNBR_TYPE" : {
+                        "type" : "string",
+                        "maxLength" : 6
+                      }
+                    }
+                  }
+                },
+                "X774251_TIE_BREAKER" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_ADDR1_APT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADDR2_APT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_SSN_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_SECURITY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 20
+                },
+                "X774251_CUST_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.99999986991104E14
+                },
+                "X774251_ADR1_DATA_CITY" : {
+                  "type" : "string",
+                  "maxLength" : 25
+                },
+                "X774251_ADR1_CI_ST_FROM_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DATE_CUST_CLOSED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR1_HASH" : {
+                  "type" : "string",
+                  "maxLength" : 6
+                },
+                "X774251_CUST_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR1_DATA_STATE" : {
+                  "type" : "string",
+                  "maxLength" : 15
+                },
+                "X774251_ADR1_DATA_ZIP9" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_ADR2_STATE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR1_USE_OCC_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_EMAIL_DATE_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_TAX_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_DATA_ZIP9" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_ADDR1_STREET" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_ADR1_STATE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADVERTISING_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DISCLOSURE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_OCC_GROUP_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_DATE_BUS_EST" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_AVG_CR_BALANCE" : {
+                  "type" : "number",
+                  "description" : "Type is decimal. ",
+                  "minimum" : 0.0,
+                  "maximum" : 1.00000000099E9
+                },
+                "X774251_SEC_IND" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADDR1_FORGN_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_PLACE_OF_WORK" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_CUST_DATE_OF_BIRTH" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR2_HASH" : {
+                  "type" : "string",
+                  "maxLength" : 6
+                },
+                "X774251_ADR1_HH_ID" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E9
+                },
+                "X774251_ADR1_DATA_STREET0" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR1_DATA_STREET1" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR1_DATA_STREET2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR2_DATA_CITY" : {
+                  "type" : "string",
+                  "maxLength" : 25
+                },
+                "X774251_VALUE_FLAG" : {
+                  "type" : "string",
+                  "maxLength" : 7
+                },
+                "X774251_NAME_2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_NAME_1" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774251_NAME_1_COML" : {
+                      "type" : "string",
+                      "maxLength" : 39
+                    },
+                    "X774251_NAME_1_TYPE" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    }
+                  }
+                },
+                "X774251_ADR2_USE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_SIC_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "X774251_CUST_DATE_DECEASED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_OFF_2" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_OFF_1" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_PERFORMANCE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADDR2_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR2_HH_ID" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E9
+                },
+                "X774251_ADR2_COUNTY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_ADR1_COUNTY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_TOTAL_CML_CONTACTS" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADR1_END_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_DATE_LAST_CONTACT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADR2_DATA_CTRY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_GOVT_REF_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADDR1_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_MAIL_TITLE" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_EMAIL" : {
+                  "type" : "string",
+                  "maxLength" : 120
+                },
+                "X774251_EMAIL_OPER_LAST_MAINT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774251_CUST_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_SSN_TAXID_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_CUST_TYPE_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR2_USE_OCC_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_MARITAL_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_TEST_PROD_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_DATA_STATE" : {
+                  "type" : "string",
+                  "maxLength" : 15
+                },
+                "X774251_TELEX_NBR" : {
+                  "type" : "string",
+                  "maxLength" : 16
+                },
+                "X774251_ADR2_END_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_CML_CONT_TBL" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_PREF_CONTACT_IND" : {
+                        "type" : "string",
+                        "maxLength" : 1
+                      },
+                      "X774251_CONTACT_MOBILE" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_SEQ_NBR" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 9999.0
+                      },
+                      "X774251_CONTACT_FAX_NBR" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_PHONE" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_NAME" : {
+                        "type" : "string",
+                        "maxLength" : 40
+                      },
+                      "X774251_CONTACT_TITLE" : {
+                        "type" : "string",
+                        "maxLength" : 40
+                      }
+                    }
+                  }
+                },
+                "X774251_CUST_LANG_CD" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_DATE_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_EMPLOYEE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADDR2_STREET" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_ID" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_GOVT_REF_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.9999997952E10
+                },
+                "X774251_ALIAS_RECORD_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DATE_BANKRUPT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_BANK_RELATIONSHIPS" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_BK_REL" : {
+                        "type" : "string",
+                        "maxLength" : 3
+                      }
+                    }
+                  }
+                },
+                "X774251_BANK_SERVICES" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_BK_SER" : {
+                        "type" : "string",
+                        "maxLength" : 3
+                      }
+                    }
+                  }
+                },
+                "X774251_ADR1_DATA_CTRY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR2_CI_ST_FROM_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_SALUTATION" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_COE_EXPIRY_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_EXPAN_NAME_ID" : {
+                  "type" : "string",
+                  "maxLength" : 19
+                },
+                "X774251_CD_ACCT_DETAILS" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774251_CD_LAST_ACCT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X774251_CD_ACCT_DATA" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "X774251_CD_PRODUCT_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_ACCT_REL_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_BALANCE_SIGN" : {
+                            "type" : "string",
+                            "maxLength" : 1
+                          },
+                          "X774251_CD_SUBPROD_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_LIMIT" : {
+                            "type" : "number",
+                            "description" : "Type is decimal. ",
+                            "minimum" : 0.0,
+                            "maximum" : 9.99999982796899E12
+                          },
+                          "X774251_CD_ACCT_BRANCH" : {
+                            "type" : "integer",
+                            "minimum" : 0.0,
+                            "maximum" : 99999.0
+                          },
+                          "X774251_CD_ACCT_NUMBER" : {
+                            "type" : "string",
+                            "maxLength" : 23
+                          },
+                          "X774251_CD_LIMIT_SIGN" : {
+                            "type" : "string",
+                            "maxLength" : 1
+                          },
+                          "X774251_CD_BALANCE" : {
+                            "type" : "number",
+                            "description" : "Type is decimal. ",
+                            "minimum" : 0.0,
+                            "maximum" : 9.99999982796899E12
+                          },
+                          "X774251_CD_DATE_ACT_OPENED" : {
+                            "type" : "integer",
+                            "minimum" : 0.0,
+                            "maximum" : 1.0E8
+                          },
+                          "X774251_CD_ACCT_STATUS" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_RISK_GRADE" : {
+                            "type" : "string",
+                            "maxLength" : 2
+                          }
+                        }
+                      }
+                    },
+                    "X774251_CD_NUM_ACCTS_RETND" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 999.0
+                    },
+                    "X774251_CD_LAST_ACCT_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774251_CD_MORE_ACCTS_IND" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    }
+                  }
+                },
+                "X774251_INDIV_EMPLOYMT_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR1_USE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_TOTAL_INDIV_PHONNBRS" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADR2_DATA_STREET0" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADDR2_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_DIARY_COMMENT_FLAG" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "FILL_1" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR2_DATA_STREET1" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR2_DATA_STREET2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADDR2_FORGN_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_DATE_CUST_OPENED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_TAXID_SUFFIX" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_START_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADR2_DATA_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_TFN_EXEMP_NUM_DIGITS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_CUST_SEX" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_NATLTY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                }
+              }
+            },
+            "STDOUTPT_PRIMARY_HEADER" : {
+              "type" : "object",
+              "properties" : {
+                "STDOUTPT_ERROR_MESSAGE" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "STDOUTPT_SERVICE_RESULT_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "STDOUTPT_CONDITION_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GET_CUST_PROFILE_V06_GET_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "X774408_CIS_CIF_MQ_DETAIL_V01" : {
+          "type" : "object",
+          "properties" : {
+            "X774251_RESPONSE_MESSAGE" : {
+              "type" : "object",
+              "properties" : {
+                "X774251_OCCUPATION_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "X774251_ADR1_START_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR1_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR1_DATA_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_SENSITIVITY_CODE_N" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.0
+                },
+                "X774251_COUNTRY_EXEMPT" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_COST_CENTER" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9999999.0
+                },
+                "X774251_OPER_LAST_MAINT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774251_BRN" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_INDIV_PHONNBR_TBL" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_PREF_PHONE_IND" : {
+                        "type" : "string",
+                        "maxLength" : 1
+                      },
+                      "X774251_PHONE_EFF_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 1.0E8
+                      },
+                      "X774251_PHONNBR_SEQ" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 9999.0
+                      },
+                      "X774251_PHONE_NBR" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_PHONE_EXP_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 1.0E8
+                      },
+                      "X774251_PHONNBR_TYPE" : {
+                        "type" : "string",
+                        "maxLength" : 6
+                      }
+                    }
+                  }
+                },
+                "X774251_TIE_BREAKER" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_ADDR1_APT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADDR2_APT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_SSN_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_SECURITY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 20
+                },
+                "X774251_CUST_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.99999986991104E14
+                },
+                "X774251_ADR1_DATA_CITY" : {
+                  "type" : "string",
+                  "maxLength" : 25
+                },
+                "X774251_ADR1_CI_ST_FROM_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DATE_CUST_CLOSED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR1_HASH" : {
+                  "type" : "string",
+                  "maxLength" : 6
+                },
+                "X774251_CUST_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR1_DATA_STATE" : {
+                  "type" : "string",
+                  "maxLength" : 15
+                },
+                "X774251_ADR1_DATA_ZIP9" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_ADR2_STATE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR1_USE_OCC_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_EMAIL_DATE_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_TAX_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_DATA_ZIP9" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_ADDR1_STREET" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_ADR1_STATE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADVERTISING_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DISCLOSURE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_OCC_GROUP_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_DATE_BUS_EST" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_AVG_CR_BALANCE" : {
+                  "type" : "number",
+                  "description" : "Type is decimal. ",
+                  "minimum" : 0.0,
+                  "maximum" : 1.00000000099E9
+                },
+                "X774251_SEC_IND" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADDR1_FORGN_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_PLACE_OF_WORK" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_CUST_DATE_OF_BIRTH" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADDR2_HASH" : {
+                  "type" : "string",
+                  "maxLength" : 6
+                },
+                "X774251_ADR1_HH_ID" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E9
+                },
+                "X774251_ADR1_DATA_STREET0" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR1_DATA_STREET1" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR1_DATA_STREET2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR2_DATA_CITY" : {
+                  "type" : "string",
+                  "maxLength" : 25
+                },
+                "X774251_VALUE_FLAG" : {
+                  "type" : "string",
+                  "maxLength" : 7
+                },
+                "X774251_NAME_2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_NAME_1" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774251_NAME_1_COML" : {
+                      "type" : "string",
+                      "maxLength" : 39
+                    },
+                    "X774251_NAME_1_TYPE" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    }
+                  }
+                },
+                "X774251_ADR2_USE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_SIC_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "X774251_CUST_DATE_DECEASED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_OFF_2" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_OFF_1" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_PERFORMANCE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADDR2_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR2_HH_ID" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E9
+                },
+                "X774251_ADR2_COUNTY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_ADR1_COUNTY_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_TOTAL_CML_CONTACTS" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADR1_END_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_DATE_LAST_CONTACT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADR2_DATA_CTRY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_GOVT_REF_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADDR1_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_MAIL_TITLE" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_EMAIL" : {
+                  "type" : "string",
+                  "maxLength" : 120
+                },
+                "X774251_EMAIL_OPER_LAST_MAINT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "X774251_CUST_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_SSN_TAXID_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_CUST_TYPE_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR2_USE_OCC_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_MARITAL_STATUS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_TEST_PROD_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_DATA_STATE" : {
+                  "type" : "string",
+                  "maxLength" : 15
+                },
+                "X774251_TELEX_NBR" : {
+                  "type" : "string",
+                  "maxLength" : 16
+                },
+                "X774251_ADR2_END_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_CML_CONT_TBL" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_PREF_CONTACT_IND" : {
+                        "type" : "string",
+                        "maxLength" : 1
+                      },
+                      "X774251_CONTACT_MOBILE" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_SEQ_NBR" : {
+                        "type" : "integer",
+                        "minimum" : 0.0,
+                        "maximum" : 9999.0
+                      },
+                      "X774251_CONTACT_FAX_NBR" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_PHONE" : {
+                        "type" : "string",
+                        "maxLength" : 16
+                      },
+                      "X774251_CONTACT_NAME" : {
+                        "type" : "string",
+                        "maxLength" : 40
+                      },
+                      "X774251_CONTACT_TITLE" : {
+                        "type" : "string",
+                        "maxLength" : 40
+                      }
+                    }
+                  }
+                },
+                "X774251_CUST_LANG_CD" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "X774251_DATE_LAST_MAINT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_EMPLOYEE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADDR2_STREET" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_CUST_ID" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "X774251_GOVT_REF_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 9.9999997952E10
+                },
+                "X774251_ALIAS_RECORD_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_DATE_BANKRUPT" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_BANK_RELATIONSHIPS" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_BK_REL" : {
+                        "type" : "string",
+                        "maxLength" : 3
+                      }
+                    }
+                  }
+                },
+                "X774251_BANK_SERVICES" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "X774251_BK_SER" : {
+                        "type" : "string",
+                        "maxLength" : 3
+                      }
+                    }
+                  }
+                },
+                "X774251_ADR1_DATA_CTRY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR2_CI_ST_FROM_ZIP" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_SALUTATION" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_COE_EXPIRY_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_EXPAN_NAME_ID" : {
+                  "type" : "string",
+                  "maxLength" : 19
+                },
+                "X774251_CD_ACCT_DETAILS" : {
+                  "type" : "object",
+                  "properties" : {
+                    "X774251_CD_LAST_ACCT_NUMBER" : {
+                      "type" : "string",
+                      "maxLength" : 23
+                    },
+                    "X774251_CD_ACCT_DATA" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "X774251_CD_PRODUCT_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_ACCT_REL_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_BALANCE_SIGN" : {
+                            "type" : "string",
+                            "maxLength" : 1
+                          },
+                          "X774251_CD_SUBPROD_CODE" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_LIMIT" : {
+                            "type" : "number",
+                            "description" : "Type is decimal. ",
+                            "minimum" : 0.0,
+                            "maximum" : 9.99999982796899E12
+                          },
+                          "X774251_CD_ACCT_BRANCH" : {
+                            "type" : "integer",
+                            "minimum" : 0.0,
+                            "maximum" : 99999.0
+                          },
+                          "X774251_CD_ACCT_NUMBER" : {
+                            "type" : "string",
+                            "maxLength" : 23
+                          },
+                          "X774251_CD_LIMIT_SIGN" : {
+                            "type" : "string",
+                            "maxLength" : 1
+                          },
+                          "X774251_CD_BALANCE" : {
+                            "type" : "number",
+                            "description" : "Type is decimal. ",
+                            "minimum" : 0.0,
+                            "maximum" : 9.99999982796899E12
+                          },
+                          "X774251_CD_DATE_ACT_OPENED" : {
+                            "type" : "integer",
+                            "minimum" : 0.0,
+                            "maximum" : 1.0E8
+                          },
+                          "X774251_CD_ACCT_STATUS" : {
+                            "type" : "string",
+                            "maxLength" : 3
+                          },
+                          "X774251_CD_RISK_GRADE" : {
+                            "type" : "string",
+                            "maxLength" : 2
+                          }
+                        }
+                      }
+                    },
+                    "X774251_CD_NUM_ACCTS_RETND" : {
+                      "type" : "integer",
+                      "minimum" : 0.0,
+                      "maximum" : 999.0
+                    },
+                    "X774251_CD_LAST_ACCT_PROD" : {
+                      "type" : "string",
+                      "maxLength" : 3
+                    },
+                    "X774251_CD_MORE_ACCTS_IND" : {
+                      "type" : "string",
+                      "maxLength" : 1
+                    }
+                  }
+                },
+                "X774251_INDIV_EMPLOYMT_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_ADR1_USE_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                },
+                "X774251_TOTAL_INDIV_PHONNBRS" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_ADR2_DATA_STREET0" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADDR2_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_DIARY_COMMENT_FLAG" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "FILL_1" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "X774251_ADR2_DATA_STREET1" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADR2_DATA_STREET2" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "X774251_ADDR2_FORGN_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "X774251_DATE_CUST_OPENED" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_TAXID_SUFFIX" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_ADR2_START_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                },
+                "X774251_ADR2_DATA_TIE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 99999.0
+                },
+                "X774251_TFN_EXEMP_NUM_DIGITS" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_CUST_SEX" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "X774251_NATLTY_CD" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                }
+              }
+            },
+            "STDOUTPT_PRIMARY_HEADER" : {
+              "type" : "object",
+              "properties" : {
+                "STDOUTPT_ERROR_MESSAGE" : {
+                  "type" : "string",
+                  "maxLength" : 40
+                },
+                "STDOUTPT_SERVICE_RESULT_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 999.0
+                },
+                "STDOUTPT_CONDITION_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0.0,
+                  "maximum" : 1.0E8
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+>>>>>>> 0e07f88d2e4cc5a109308531df1b2556355e0ae8
+}

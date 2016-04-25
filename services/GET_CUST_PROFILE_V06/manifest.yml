@@ -1,0 +1,33 @@
+---
+Manifest-Version: 1.0
+name: "GET_CUST_PROFILE_V06"
+provider: "imsmobile-2.0"
+factoryPid: "com.ibm.ims.zconnect.service"
+requestSchema:
+  value: "file:///schemas/GET_CUST_PROFILE_V06Request.json"
+  type: "JSONSchema"
+responseSchema:
+  value: "file:///schemas/GET_CUST_PROFILE_V06Response.json"
+  type: "JSONSchema"
+providerProperties: []
+providerObjects:
+- name: "ADIHFR32.ADIHFR32 - INPUT"
+  value: "file:///objects/messages/ADIHFR32.ADIHFR32 - INPUT.json"
+  type: "com.ibm.ims.gateway.rest.models.GatewayTransactionMessage"
+  version: "1.0"
+- name: "ADIHFR32.ADIHFR32 - OUTPUT"
+  value: "file:///objects/messages/ADIHFR32.ADIHFR32 - OUTPUT.json"
+  type: "com.ibm.ims.gateway.rest.models.GatewayTransactionMessage"
+  version: "1.0"
+- name: "IMS1"
+  value: "file:///objects/interactions/IMS1.json"
+  type: "com.ibm.ims.gateway.rest.models.GatewayProperties"
+  version: "1.0"
+- name: "IMS1"
+  value: "file:///objects/connections/IMS1.json"
+  type: "com.ibm.ims.gateway.adapter.GatewayConnectionAdapterImpl"
+  version: "3.0"
+- name: "GET_CUST_PROFILE_V06"
+  value: "file:///objects/services/GET_CUST_PROFILE_V06.json"
+  type: "com.ibm.ims.gateway.rest.models.GatewayService"
+  version: "1.0"
