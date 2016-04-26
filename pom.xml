@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.anz.api</groupId>
-	<artifactId>GET_CUST</artifactId>
+	<artifactId>api_get_cust_v1</artifactId>
 	<version>0.0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
