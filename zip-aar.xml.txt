@@ -8,11 +8,11 @@
  <fileSets>
         <fileSet>
             <directory>${basedir}</directory>
-            <outputDirectory>target</outputDirectory>
+            <outputDirectory>/</outputDirectory>
             <includes>
                 <include>**/*.aar</include>
-                <include>server-includes/**</include>
-                <include>src/main/scripts/*.sh</include>
+                <include>server-includes/**/**</include>
+                <include>src/main/scripts/install.sh</include>
              </includes>
         </fileSet>
 
