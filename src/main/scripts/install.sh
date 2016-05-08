@@ -46,7 +46,9 @@ echo "Deploying server includes"
 
 case $command in
 deploy)
-	cp ${servername}/*.xml "/var/zosconnect/servers/${servername}"
+	cp server-includes/${servername}/*.xml "/var/zosconnect/servers/${servername}"
+	echo "server includes copied..."
+	ls -altr 
 	;;
 esac	
 }
