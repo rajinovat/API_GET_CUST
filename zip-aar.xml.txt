@@ -7,8 +7,8 @@
     <includeBaseDirectory>false</includeBaseDirectory>
  <fileSets>
         <fileSet>
-            <directory>${basedir}/target</directory>
-            <outputDirectory>/</outputDirectory>
+            <directory>${basedir}</directory>
+            <outputDirectory>target</outputDirectory>
             <includes>
                 <include>**/*.aar</include>
                 <include>server-includes/**</include>
