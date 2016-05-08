@@ -28,9 +28,9 @@ OPTIONS:
 EOF
 }
 
-function executCommand() {
+function executeCommand() {
 # API Archive File Installation
-unzip "${zipfilename}.zip"
+#unzip "${zipfilename}.zip"
 
 $zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/var/zosconnect/servers/${servername}/resources/zosconnect/apis/"
 
@@ -38,14 +38,14 @@ $zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/v
 	result=$?
 	if [[ $result -ne 0 ]]
 	then
-		echo "Deployment of API archive $zipfilename.aar failed."
+		echo "${command} of API archive $zipfilename.aar failed."
 		exit 1
 	fi
 
-echo "Deploying server includes"
-
 case $command in
 deploy)
+	
+	echo "Deploying server includes"
 	cp server-includes/${servername}/*.xml "/var/zosconnect/servers/${servername}"
 	echo "server includes copied..."
 	ls -altr 
@@ -53,21 +53,6 @@ deploy)
 esac	
 }
 
-
-function undeployAAR() {
-# API Archive File Installation
-unzip "zipfilename.zip"
-
-$zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/var/zosconnect/servers/${servername}/resources/zosconnect/apis/"
-
-	# api deployment status
-	result=$?
-	if [[ $result -ne 0 ]]
-	then
-		echo "Deployment of API archive $zipfilename.aar failed."
-		exit 1
-	fi
-}
 
 
 function parseParameters() {
@@ -116,6 +101,6 @@ executeCommand
 
 # Deployment complete
 echo "Deployment of API archive $filename.aar is complete."
-apicLogout
+
 
 exit 0
