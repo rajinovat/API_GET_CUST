@@ -48,9 +48,17 @@ deploy)
 	echo "Copying server includes into /var/zosconnect/servers/${servername}"
 	cp server-includes/${servername}/*-*.xml "/var/zosconnect/servers/${servername}"
 	echo "server includes copied..."
+	
+	#You can comment below server.xml copy steps if you do want server.xml to be deployed..
+	
+	#echo "Copying server.xml into /var/zosconnect/servers/${servername}"
+	#cp server-includes/${servername}/server.xml /var/zosconnect/servers/${servername}
+	#echo "server.xml copied..."
+	
 	ls -altr 
 	;;
-esac	
+esac
+	
 }
 
 
