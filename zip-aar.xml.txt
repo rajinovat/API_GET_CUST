@@ -10,9 +10,9 @@
             <directory>${basedir}</directory>
             <outputDirectory>/</outputDirectory>
             <includes>
-                <include>**/*.aar</include>
-                <include>server-includes/**/**</include>
-                <include>src/main/scripts/install.sh</include>
+                <include>target/**/*.aar</include>
+                <include>server-includes/**/*</include>
+                <include>src/main/scripts/**/install.sh</include>
              </includes>
         </fileSet>
 
