@@ -11,7 +11,9 @@
             <outputDirectory>/</outputDirectory>
             <excludes>
                 <exclude>*.txt</exclude>
-				<exclude>target/**</exclude>	
+				<exclude>target/**</exclude>
+				<exclude>src/**</exclude>
+				<exclude>includes/**</exclude>	
              </excludes>
             <includes>
                 <include>**/*</include>
