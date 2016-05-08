@@ -23,14 +23,14 @@ OPTIONS:
 	-h		Help
 	-l      The location of zconnect installation home
 	-s      z-Connect Server Name
-	-p      zipfilename
-	-c      deploy or undeploy
+	-p      filename
+	-c      Installation commands : [deploy][undeploy]
 EOF
 }
 
-function deployAAR() {
+function executCommand() {
 # API Archive File Installation
-unzip "zipfilename.zip"
+unzip "${zipfilename}.zip"
 
 $zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/var/zosconnect/servers/${servername}/resources/zosconnect/apis/"
 
@@ -41,9 +41,14 @@ $zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/v
 		echo "Deployment of API archive $zipfilename.aar failed."
 		exit 1
 	fi
+
 echo "Deploying server includes"
 
-cp  ${servername}/
+case $command in
+deploy)
+	cp ${servername}/*.xml "/var/zosconnect/servers/${servername}"
+	;;
+esac	
 }
 
 
@@ -64,27 +69,24 @@ $zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/v
 
 
 function parseParameters() {
-	while getopts “l:s:c:u:p:” OPTION
+	while getopts “l:s:p:c:” OPTION
 	do
 	     case $OPTION in
 	        h)
 	             usage
 	             exit 1
 	             ;;
-	        m)
-	            managementServer=$OPTARG
+	        l)
+	            zosconnect_install_dir=$OPTARG
 	             ;;
-	        o)
-	            organization=$OPTARG
-	             ;;
-	        c)
-	            catalog=$OPTARG
-	             ;;
-	        u)
-	            username=$OPTARG
+	        s)
+	            servername=$OPTARG
 	             ;;
 	        p)
-	            password=$OPTARG
+	            filename=$OPTARG
+	             ;;
+	        c)
+	            command=$OPTARG
 	             ;;
 	        ?)
 	             usage
@@ -94,23 +96,24 @@ function parseParameters() {
 	done
 	
 	# ensure required params are not blank
-	echo "organization=$organization,managementServer=$managementServer,catalog=$catalog,username=$username,password=$password"
-	if [[ -z $managementServer ]] || [[ -z $organization ]] || [[ -z $catalog ]] || [[ -z $username ]] || [[ -z $password ]]
+	
+	echo "zosconnect_install_dir=$zosconnect_install_dir,servername=$servername,filename=$filename,command=$command"
+	if [[ -z $zosconnect_install_dir ]] || [[ -z $servername ]] || [[ -z $filename ]] || [[ -z $command ]]
 	then
 		usage
 		exit 1
 	fi
+	
 }
 
 
 # start of main pogram
 parseParameters $@
-apicLogin
-apicPushDraft
-apicPublishToCatalog
+executeCommand
+
 
 # Deployment complete
-echo "Deployment of API $apiName version $apiVersion to catalog $catalog is complete."
+echo "Deployment of API archive $filename.aar is complete."
 apicLogout
 
 exit 0
