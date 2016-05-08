@@ -10,7 +10,7 @@
             <directory>${basedir}</directory>
             <outputDirectory>/</outputDirectory>
             <excludes>
-                <exclude>*.txt</exclude>
+                <exclude>pom.xml</exclude>
 				<exclude>target/**</exclude>
 				<exclude>src/**</exclude>
 				<exclude>server-includes/**</exclude>	

@@ -47,7 +47,7 @@
 					<appendAssemblyId>false</appendAssemblyId>
 					<attach>true</attach>
 					<descriptors>
-              				<descriptor>zip-resources.xml.txt</descriptor>
+              				<descriptor>zip-resources.assembly</descriptor>
            				</descriptors>
            
 				 </configuration>
@@ -63,7 +63,7 @@
 					<appendAssemblyId>false</appendAssemblyId>
 					<attach>true</attach>
 					<descriptors>
-              				<descriptor>zip-aar.xml.txt</descriptor>
+              				<descriptor>zip-aar.assembly</descriptor>
            				</descriptors>
    				 </configuration>
 				</execution>
