@@ -13,7 +13,7 @@
                 <exclude>*.txt</exclude>
 				<exclude>target/**</exclude>
 				<exclude>src/**</exclude>
-				<exclude>includes/**</exclude>	
+				<exclude>server-includes/**</exclude>	
              </excludes>
             <includes>
                 <include>**/*</include>

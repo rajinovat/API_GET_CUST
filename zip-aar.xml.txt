@@ -11,8 +11,8 @@
             <outputDirectory>/</outputDirectory>
             <includes>
                 <include>**/*.aar</include>
-                <include>**/includes</include>
-                <include>**/src/main/scripts/install.sh</include>
+                <include>server-includes/**</include>
+                <include>src/main/scripts/*.sh</include>
              </includes>
         </fileSet>
 
