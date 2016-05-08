@@ -6,16 +6,31 @@
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
  <fileSets>
+       <fileSet>
+            <directory>target/</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>**/*.aar</include>
+             </includes>
+        </fileSet>
+        
+        <fileSet>
+            <directory>src/main/scripts/</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>**/install.sh</include>
+           
+	       </includes>
+        </fileSet>
+               
         <fileSet>
             <directory>${basedir}</directory>
             <outputDirectory>/</outputDirectory>
             <includes>
-                <include>target/**/*.aar</include>
-                <include>server-includes/**/*</include>
-                <include>src/main/scripts/**/install.sh</include>
-             </includes>
-        </fileSet>
-
+			<include>server-includes</include>
+	       </includes>
+        </fileSet> 
+          
     </fileSets>
 
 </assembly>
