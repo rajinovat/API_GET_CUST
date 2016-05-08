@@ -27,7 +27,7 @@
             <directory>${basedir}</directory>
             <outputDirectory>/</outputDirectory>
             <includes>
-			<include>server-includes</include>
+			<include>server-includes/**</include>
 	       </includes>
         </fileSet> 
           
