@@ -1,19 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <assembly>
-    <id>zip-aar</id>
+    <id>zip-release</id>
     <formats>
         <format>zip</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
  <fileSets>
         <fileSet>
-            <directory>${basedir}/target</directory>
+            <directory>${basedir}</directory>
             <outputDirectory>/</outputDirectory>
+            <excludes>
+                <exclude>*.txt</exclude>
+				<exclude>target/**</exclude>	
+             </excludes>
             <includes>
-                <include>**/*.aar</include>
+                <include>**/*</include>
              </includes>
         </fileSet>
 
     </fileSets>
+    
 
+     
 </assembly>
