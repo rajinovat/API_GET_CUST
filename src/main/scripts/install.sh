@@ -32,7 +32,7 @@ function executeCommand() {
 # API Archive File Installation
 #unzip "${zipfilename}.zip"
 
-$zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/var/zosconnect/servers/${servername}/resources/zosconnect/apis/"
+$zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/var/zosconnect/servers/${servername}/resources/zosconnect/apis/ -w"
 
 	# api deployment status
 	result=$?
@@ -45,8 +45,8 @@ $zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/v
 case $command in
 deploy)
 	
-	echo "Deploying server includes"
-	cp server-includes/${servername}/*.xml "/var/zosconnect/servers/${servername}"
+	echo "Copying server includes into /var/zosconnect/servers/${servername}"
+	cp server-includes/${servername}/*-*.xml "/var/zosconnect/servers/${servername}"
 	echo "server includes copied..."
 	ls -altr 
 	;;
