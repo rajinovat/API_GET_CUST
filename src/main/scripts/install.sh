@@ -55,7 +55,7 @@ deploy)
 	#cp server-includes/${servername}/server.xml /var/zosconnect/servers/${servername}
 	#echo "server.xml copied..."
 	
-	ls -altr 
+	ls -altr  /var/zosconnect/servers/${servername}
 	;;
 esac
 	
