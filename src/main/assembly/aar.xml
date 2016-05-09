@@ -10,8 +10,9 @@
             <directory>target/</directory>
             <outputDirectory>/</outputDirectory>
             <includes>
-                <include>**/*.aar</include>
+                <include>**/${project.name}-${project.version}.aar</include>
              </includes>
+             <filtered>true</filtered>
         </fileSet>
         
         <fileSet>
@@ -19,18 +20,10 @@
             <outputDirectory>/</outputDirectory>
             <includes>
                 <include>**/install.sh</include>
-           
+           		<include>server-includes/**</include>
 	       </includes>
+	       <filtered>true</filtered>
         </fileSet>
-               
-        <fileSet>
-            <directory>${basedir}</directory>
-            <outputDirectory>/</outputDirectory>
-            <includes>
-			<include>server-includes/**</include>
-	       </includes>
-        </fileSet> 
-          
     </fileSets>
 
 </assembly>

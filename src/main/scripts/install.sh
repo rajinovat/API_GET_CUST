@@ -2,15 +2,18 @@
 # This script deploys an API to a specified zOs Connect instance. It should be a very rare occasion when this script needs to be modified!
 
 # Input Parameters
-# --l zosconnect_install_dir    - The location of zconnect installation directory
+# --l zosconnect_install_dir    		- The location of zconnect installation directory
 # --s servername	   			- The z-Connect Server Name
-# --f filename      			- Package filename containing the AAR file
+# --f filename      				- Package filename containing the AAR file
 # --c command		   			- deploy or undeploy
 
-zosconnect_install_dir=${zosconnect_install_dir}
-servername=${servername}
-filename=${filename}
-command=${command}
+zosconnect_install_dir=
+servername=
+filename=
+command=
+
+user_profiles_home="/var/zosconnect/servers"
+apis_resource_loc="resources/zosconnect/apis/"
 
 # Do user input function
 function usage() {
@@ -20,42 +23,44 @@ usage: $0 options
 This script publishes an api into an API Connect
 
 OPTIONS:
-	-h		Help
-	-l      The location of zconnect installation home
-	-s      z-Connect Server Name
-	-p      filename
+	-h	Help
+	-l      z-Connect installation home
+	-s      z-Connect Instance Name
+	-p      Package name
 	-c      Installation commands : [deploy][undeploy]
 EOF
 }
 
 function executeCommand() {
 # API Archive File Installation
-#unzip "${zipfilename}.zip"
 
-$zosconnect_install_dir/bin/apideploy -${command} -a "${zipfilename}.aar" -p "/var/zosconnect/servers/${servername}/resources/zosconnect/apis/ -w"
+${zosconnect_install_dir}/bin/apideploy -${command} -a "${filename}.aar" -p "${user_profiles_home}/${servername}/${apis_resource_loc} -w"
 
 	# api deployment status
+
 	result=$?
 	if [[ $result -ne 0 ]]
 	then
-		echo "${command} of API archive $zipfilename.aar failed."
+		echo "${command} of API archive $filename.aar failed."
 		exit 1
 	fi
 
 case $command in
 deploy)
 	
-	echo "Copying server includes into /var/zosconnect/servers/${servername}"
-	cp server-includes/${servername}/*-*.xml "/var/zosconnect/servers/${servername}"
+	echo "Copying server includes into ${user_profiles_home}/${servername}"
+
+	cp server-includes/${servername}/*-*.xml "${user_profiles_home}/${servername}"
+
 	echo "server includes copied..."
 	
-	#You can comment below server.xml copy steps if you do want server.xml to be deployed..
+	#Uncomment below steps to overwrite server.xml..
 	
 	#echo "Copying server.xml into /var/zosconnect/servers/${servername}"
 	#cp server-includes/${servername}/server.xml /var/zosconnect/servers/${servername}
 	#echo "server.xml copied..."
 	
-	ls -altr  /var/zosconnect/servers/${servername}
+	ls -altr  "${user_profiles_home}/${servername}"
 	;;
 esac
 	
@@ -109,6 +114,5 @@ executeCommand
 
 # Deployment complete
 echo "Deployment of API archive $filename.aar is complete."
-
 
 exit 0
