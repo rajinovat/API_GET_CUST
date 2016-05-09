@@ -3,7 +3,7 @@
 
 	<groupId>com.anz.api</groupId>
 	<artifactId>api_get_cust</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	          <properties>
@@ -16,7 +16,7 @@
   			    <url>scm:git:${gitUrl}</url>
                 <connection>scm:git:${gitUrl}</connection>
                 <developerConnection>scm:git:${gitUrl}</developerConnection>
-          <tag>api_get_cust-1.0.0</tag>
+          <tag>HEAD</tag>
   </scm>
 
         <distributionManagement>
